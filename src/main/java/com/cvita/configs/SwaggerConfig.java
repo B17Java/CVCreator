@@ -32,8 +32,8 @@ public class SwaggerConfig {
 				"CVITA API",
 				"com.CVITA API reference for developers",
 				"0.0.1",
-				"http://localhost:8080",
-				new Contact("Chatita", "http://localhost:8080", "kos91q@gmail.com"),
+				"http://localhost:3388",
+				new Contact("Chatita", "http://localhost:3388", "kos91q@gmail.com"),
 				"License",
 				"LicenseUrl",
 				Collections.emptyList()
