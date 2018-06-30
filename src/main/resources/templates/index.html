@@ -101,13 +101,17 @@
                     <label for="password">Password</label>
                     <input type="password" name="password" class="form-control" id="password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary" style="margin-left: 20px; font-size: 10px;
+                <button type="submit" class="btn btn-lg btn-primary btn-bloc" style="margin-left: 20px; font-size: 10px;
                     background-color: silver;">Sign in
                 </button>
+                <form class="form-signin" th:action="@{/signup}" method="get">
+                    <button class="btn btn-md btn-success btn-block" type="Submit"
+                            style="margin-left: 20px; font-size: 10px; background-color: silver;">Реєстрація</button>
+                </form>
             </form>
-            <button type="submit" class="btn btn-primary"
-                    style="margin-left: 20px; font-size: 10px; background-color: silver;">Реєстрація
-            </button>
+            <!--<button type="submit" class="btn btn-primary"-->
+                    <!--style="margin-left: 20px; font-size: 10px; background-color: silver;">Реєстрація-->
+            <!--</button>-->
         </div>
     </div>
     <!--         <form class="form-inline">
@@ -158,6 +162,9 @@
                     <a class="btn btn-primary" href="#" role="button" style="height: 50px;
                         width: auto;font-size: 23px;margin-right: 590px;
                         background-color: silver;border:4px solid silver;">Реєстрація</a>
+                    <form class="form-signin" th:action="@{/signup}" method="get">
+                        <button class="btn btn-md btn-success btn-block" type="Submit">Реєстрація</button>
+                    </form>
                 </div>
             </div>
         </div>
