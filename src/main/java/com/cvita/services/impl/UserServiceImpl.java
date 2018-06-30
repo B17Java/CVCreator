@@ -2,6 +2,7 @@ package com.cvita.services.impl;
 
 import com.cvita.models.AboutUser;
 import com.cvita.models.HardSkill;
+import com.cvita.models.HrSearchResult;
 import com.cvita.models.User;
 import com.cvita.repositories.HardSkillRepository;
 import com.cvita.repositories.UserRepository;
@@ -9,6 +10,7 @@ import com.cvita.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 @Service
@@ -58,29 +60,44 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Map<User, List<String>> hrSearch(List<String> searchSkills) {
+    public Map<Map<Integer, Integer>, Map<User, List<String>>> hrSearch(List<String> searchSkills) {
+
+
         List<User> users = getAllUsers();
-        Map<User, List<String>> result = new HashMap<>();
+        Map<Map<Integer, Integer>, Map<User, List<String>>> result = new HashMap<>();
         for (User user : users) {
             if (user.getAboutUser() != null) {
+                List<String> coincidedSkills = new ArrayList<>();
+                Map<User, List<String>> preResult = new HashMap<>();
                 for (HardSkill userHardSkill : user.getAboutUser().getHardSkills()) {
-                    List<String> coincidedSkills = new ArrayList<>();
                     for (String searchSkill : searchSkills) {
                         if (userHardSkill.getName().toUpperCase().equals(searchSkill.toUpperCase())) {
                             coincidedSkills.add(searchSkill);
-//                            break;
-//                            usersR    esult.add(user);
-//                            break;
                         }
                     }
-                    if (!coincidedSkills.isEmpty()){
-                        result.put(user, coincidedSkills);
-                    }
+                }
+                if (!coincidedSkills.isEmpty()) {
+                    preResult.put(user, coincidedSkills);
+                    Map<Integer, Integer> numAndPercent = new HashMap<>();
+                    numAndPercent.put(result.size() + 1, (coincidedSkills.size() * 100) / searchSkills.size());
+                    result.put(numAndPercent, preResult);
                 }
             }
         }
+        return result;
+    }
 
+    @Override
+    public HrSearchResult hrSearch2(List<String> searchSkills) {
+        HrSearchResult result = new HrSearchResult();
+        result.setSearchSkills(searchSkills);
+        List<User> users = getAllUsers();
+        for (User user : users) {
+            if (user.getAboutUser()!=null){
+                List<String> coincidedSkills = new ArrayList<>();
 
+            }
+        }
         return result;
     }
 

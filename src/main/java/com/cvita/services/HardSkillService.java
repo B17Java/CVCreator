@@ -1,6 +1,7 @@
 package com.cvita.services;
 
 import com.cvita.models.HardSkill;
+import com.cvita.models.HrSearchResult;
 
 import java.util.List;
 import java.util.Set;

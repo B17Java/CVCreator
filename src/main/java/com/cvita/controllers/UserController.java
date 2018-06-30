@@ -1,6 +1,7 @@
 package com.cvita.controllers;
 
 import com.cvita.models.AboutUser;
+import com.cvita.models.HrSearchResult;
 import com.cvita.models.User;
 import com.cvita.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,9 +52,14 @@ public class UserController {
     }
 
 
-    @RequestMapping("/search")
-    public Map<User, List<String>> search(@RequestBody List<String> searchSkills){
+    @PostMapping("/search")
+    public Map<Map<Integer, Integer>, Map<User, List<String>>> search(@RequestBody List<String> searchSkills){
         return userService.hrSearch(searchSkills);
+    }
+
+    @PostMapping("/search2")
+    public HrSearchResult search2(@RequestBody List<String> searchSkills){
+        return userService.hrSearch2(searchSkills);
     }
 
 }

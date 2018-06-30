@@ -32,7 +32,7 @@ public class User implements Serializable {
     //    @DBRef
     private  AboutUser aboutUser;
 
-    private Map<LocalDateTime,List<String>> hrSearchResult;
+    private HrSearchResult hrSearchResult;
 
     public User(){}
 
