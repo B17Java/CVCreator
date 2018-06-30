@@ -34,6 +34,11 @@ public class LoginController {
         modelAndView.setViewName("login");
         return modelAndView;
     }
+//    @RequestMapping(value = "/", method = RequestMethod.GET)
+//    public String index() {
+//        System.out.println("index");
+//        return "/";
+//    }
 
     @RequestMapping(value = "/signup", method = RequestMethod.GET)
     public ModelAndView signup() {

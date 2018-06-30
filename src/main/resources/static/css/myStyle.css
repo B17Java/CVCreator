@@ -49,7 +49,7 @@ p {
     }
 
 #header1 {
-    background: url(../img/header.jpg) no-repeat center top;
+    background: url(/img/header.jpg) no-repeat center top;
 
     padding-top: 10px;
     text-align: center;
