@@ -15,6 +15,16 @@ h6 {
     font-weight: 300;
     color: #333;
 }
+a {
+    color: #f85c37;
+}
+
+a:hover,
+a:focus {
+    color: black;
+    text-decoration: none;
+    outline: 0;
+}
 
 p {
     line-height: 28px;
@@ -23,15 +33,6 @@ p {
 
 .centered {
     text-align: center;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
 }
 
 .zagolovok{
@@ -54,7 +55,7 @@ hr {
     text-align: center;
     background-attachment: relative;
     background-position: center center;
-    min-height: 350px;
+    min-height: 320px;
     width: 100%;
     background-size: 100%;
 
@@ -64,7 +65,6 @@ hr {
     background-size: cover;
 }
 #header2 {
-
     padding-top: 10px;
     text-align: center;
     background-attachment: relative;
@@ -78,18 +78,8 @@ hr {
     -o-background-size: cover;
     background-size: cover;
 }
-#header p,
-h1 {
-    margin-top: -10px;
-    color: white;
-    font-family: serif;
-    font-size: 40px;
-    padding-top: 3px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
 
- #foot {
+#foot {
     margin-top: 10px;
     color: black;
     background: white;
@@ -105,7 +95,7 @@ h1 {
 }
 
 #foot a {
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .icons {
@@ -120,10 +110,9 @@ h1 {
 .end{
     width: 100%;
     height: 38px;
-    background-color: grey;
+    background-color: silver;
     color:white;
     font-size: 13px;
     display: flex;
     flex-direction: row;
-
 }
