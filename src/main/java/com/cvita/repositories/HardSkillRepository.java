@@ -13,8 +13,6 @@ import java.util.Set;
 @Transactional
 public interface HardSkillRepository extends MongoRepository<HardSkill, String> {
     boolean existsByName(String name);
-
     List<HardSkill> findHardSkillsByNameContaining(String name);
-
 
 }

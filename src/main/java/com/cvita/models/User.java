@@ -3,6 +3,7 @@ package com.cvita.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -16,20 +17,23 @@ import java.util.Set;
 
 
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 @Document(collection = "users")
-public class User implements Serializable {
+public class User {
 
     @Id
     private String id;
 
-    @Indexed(unique = true)
+    @Indexed(unique = true, direction = IndexDirection.DESCENDING, dropDups = true)
     private String email;
+    private String password;
+    private String fullname;
+    private boolean enabled;
+    private String roleFromForm;
 
     @DBRef
     private Set<Role> roles;
 
-    //    @DBRef
     private  AboutUser aboutUser;
 
     private HrSearchResult hrSearchResult;
