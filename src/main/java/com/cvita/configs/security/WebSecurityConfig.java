@@ -43,7 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/","/static/**", "/index", "/403", "/swagger-resources/**","/login","/signup",
+                .antMatchers("/","/static/**","/bootstrap/**", "/index", "/403", "/swagger-resources/**","/login","/signup",
                         "/img/**","/fonts/**","/css/**").permitAll()
                 .antMatchers("/user/**").hasAuthority("USER")
                 .antMatchers("/hr/**").hasAuthority("HR")
@@ -76,7 +76,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web
                 .ignoring()
-                .antMatchers("/resources/**", "/img/**","/fonts/**","/css/**","/swagger-resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
+                .antMatchers("/resources/**", "/img/**","/bootstrap/**","/fonts/**","/css/**","/swagger-resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
     }
 
 }

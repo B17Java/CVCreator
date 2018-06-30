@@ -44,18 +44,17 @@ p {
 }
 
 .dropdown{
-        position: absolute;
         left: 60%;
     }
 
 #header1 {
     background: url(/img/header.jpg) no-repeat center top;
 
-    padding-top: 10px;
+    padding-top: 50px;
     text-align: center;
     background-attachment: relative;
     background-position: center center;
-    min-height: 320px;
+    min-height: 450px;
     width: 100%;
     background-size: 100%;
 
@@ -65,11 +64,11 @@ p {
     background-size: cover;
 }
 #header2 {
-    padding-top: 10px;
+    padding-top: 50px;
     text-align: center;
     background-attachment: relative;
     background-position: center center;
-    min-height: 300px;
+    min-height: 450px;
     width: 100%;
     background-size: 100%;
 
@@ -109,7 +108,7 @@ p {
 }
 .end{
     width: 100%;
-    height: 38px;
+    height: 42px;
     background-color: silver;
     color:white;
     font-size: 13px;

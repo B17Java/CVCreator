@@ -54,27 +54,22 @@
             border: 1px solid silver;height: 50px; color: white; font-size: 17px;font-family: 'ARIAl';">
             Форма реєстрації
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-            <form class="dropdown-item form-signin" th:action="@{/login}" method="post"
-                  style="font-family: 'ARIAl'; font-size: 14px;">
-                <div th:if="${param.error}">
-                    Invalid email and password.
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu3" style="width: 300px;height: 300px;">
+            <button class="dropdown-item" type="button" style="font-family: 'ARIAl'; font-size: 18px;">
+                <div class="form-group">
+                    <label for="exampleDropdownFormEmail2">Email address</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com"
+                           style="font-family: 'ARIAl'; font-size: 18px;">
                 </div>
-                <div th:if="${param.logout}">
-                    You have been logged out.
+                <div class="form-group">
+                    <label for="exampleDropdownFormPassword2">Password</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password"
+                           style="font-family: 'ARIAl'; font-size: 18px;">
                 </div>
-                <label for="email">Email address</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="email" required="true">
-
-                <label for="password">Password</label>
-                <input type="password" name="password" class="form-control" id="password" placeholder="Password"
-                       required="true">
-                <button type="submit" class="btn btn-primary" style="margin-left: 20px; font-size: 10px;
-                    background-color: silver;">Sign in
-                </button>
-            </form>
-            <button type="submit" class="btn btn-primary"
-                    style="margin-left: 20px; font-size: 10px; background-color: silver;">Реєстрація
+                <button type="submit" class="btn btn-primary" style="margin-left: 16px; font-size: 10px; width: 200px; font-family: 'ARIAl';
+                    background-color: silver; height: 40px; border: 1px solid silver; font-size: 18px;">Sign in</button><br><br>
+                <button type="submit" class="btn btn-primary" style="margin-left: 16px; font-size: 10px; width: 200px;font-family: 'ARIAl';
+                    background-color: silver; height: 40px; border: 1px solid silver; font-size: 18px;">Реєстрація</button>
             </button>
         </div>
     </div>
