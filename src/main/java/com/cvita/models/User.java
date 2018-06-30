@@ -8,6 +8,8 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -27,10 +29,10 @@ public class User implements Serializable {
     @DBRef
     private Set<Role> roles;
 
-    @DBRef
+    //    @DBRef
     private  AboutUser aboutUser;
 
-    private Map<String,List<String>> hrSearchResult;
+    private Map<LocalDateTime,List<String>> hrSearchResult;
 
     public User(){}
 

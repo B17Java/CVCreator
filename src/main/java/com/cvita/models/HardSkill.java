@@ -11,11 +11,15 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Document(collection = "hard_skills")
 public class HardSkill implements Serializable {
+
     @Id
     private String id;
     private String name;
 
     public HardSkill() {
+    }
+    public HardSkill(String name) {
+        this.name = name;
     }
 }
 

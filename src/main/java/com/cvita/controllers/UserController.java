@@ -1,5 +1,6 @@
 package com.cvita.controllers;
 
+import com.cvita.models.AboutUser;
 import com.cvita.models.User;
 import com.cvita.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -36,10 +38,22 @@ public class UserController {
     }
 
 
-    @PostMapping(value = "/aboutname/{iduser}/{idhardskill}")
-    public void setAboutName(@PathVariable String iduser,
-                             @PathVariable String idhardskill){
-        userService.addNameToAboutUser(iduser,idhardskill);
+
+
+    @PostMapping(value = "/addHardSkills/{idUser}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void setAboutName(@PathVariable String idUser, @RequestBody List<String> idsHardSkill){
+        userService.addHardSkillToAboutUserByUserId(idUser,idsHardSkill);
+    }
+
+    @PostMapping(value = "/saveAboutUser/{idUser}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void saveAboutUser(@RequestBody AboutUser aboutUser,@PathVariable String idUser){
+        userService.saveAboutUser(idUser, aboutUser);
+    }
+
+
+    @RequestMapping("/search")
+    public Map<User, List<String>> search(@RequestBody List<String> searchSkills){
+        return userService.hrSearch(searchSkills);
     }
 
 }

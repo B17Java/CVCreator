@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class HardSkillServiceImpl implements HardSkillService {
@@ -25,17 +26,27 @@ public class HardSkillServiceImpl implements HardSkillService {
     }
 
     @Override
-    public boolean saveSkill(HardSkill hardSkill) {
-        if (!hardSkillRepository.existsByName(hardSkill.getName())) {
+    public void saveSkill(HardSkill hardSkill) {
+        if (!hardSkillRepository.existsByName(hardSkill.getName().trim())) {
+            hardSkill.setName(hardSkill.getName().trim());
             hardSkillRepository.save(hardSkill);
-            return true;
-        } else {
-            return false;
         }
     }
 
     @Override
     public void removeSkillById(String id) {
         hardSkillRepository.deleteById(id);
+    }
+
+    @Override
+    public void addAllByNames(Set<String> names) {
+        for (String name : names) {
+            saveSkill(new HardSkill(name));
+        }
+    }
+
+    @Override
+    public List<HardSkill> getAllByNameMatches(String search) {
+        return hardSkillRepository.findHardSkillsByNameContaining(search.toUpperCase());
     }
 }
