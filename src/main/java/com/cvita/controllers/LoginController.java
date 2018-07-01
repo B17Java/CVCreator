@@ -107,5 +107,9 @@ public class LoginController {
     public String error403() {
         return "/403";
     }
+    @GetMapping("/indexUser.html")
+    public String errodfghr403() {
+        return "/user/indexUser.html";
+    }
 
 }

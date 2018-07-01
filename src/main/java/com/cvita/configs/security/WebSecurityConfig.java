@@ -44,7 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/","/static/**","/bootstrap/**", "/index", "/403", "/swagger-resources/**","/login","/signup",
-                        "/img/**","/fonts/**","/css/**").permitAll()
+                        "/img/**","/fonts/**","/css/**","/indexUser.html","/user/**").permitAll()
                 .antMatchers("/user/**").hasAuthority("USER")
                 .antMatchers("/hr/**").hasAuthority("HR")
                 .anyRequest().authenticated()
