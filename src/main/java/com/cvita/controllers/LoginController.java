@@ -111,5 +111,9 @@ public class LoginController {
     public String errodfghr403() {
         return "/user/indexUser.html";
     }
+    @GetMapping("/indexHR.html")
+    public String errod5252fghr403() {
+        return "/hr/indexHR.html";
+    }
 
 }
