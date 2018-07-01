@@ -1,13 +1,256 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="UTF-8">
-    <title>hrSearchResult.html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVTITA</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/StyleHR.css">
+    <link rel="stylesheet" href="/css/inner-styles.css">
+    <link rel="stylesheet" href="/css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <!-- Rita -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="images.ico">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="data/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="data/plugins/font-awesome/css/font-awesome.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="data/css/styles.css">
 </head>
-<body>
-hrSearchResult.html
-hrSearchResult.html
-hrSearchResult.html
+<!--_______________________________________________________________________________-->
 
+<body>
+<div class="zagolovok">
+    <div style="display: flex;flex-direction: row;margin-top: 9px;margin-left: 32px;">
+        <img src="/img/cvita.png" style="height: 40px; width: 120px; ">
+    </div>
+    <div class="dropdown1">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: silver;
+                border: 1px solid silver;height: 50px; color: white; font-size: 17px;font-family: 'ARIAl';margin-left: 15px;">
+            Мова
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button" style="font-family: 'comic sans ms'">
+                <img src="https://image.flaticon.com/icons/svg/299/299700.svg" style="height: 20px;width: 20px;">
+                <a href="index_rus.html">Русский</a></button>
+            <button class="dropdown-item" type="button" style="font-family: 'comic sans ms'">
+                <img src="https://image.flaticon.com/icons/svg/299/299803.svg" style="height: 20px;width: 20px;">
+                Український
+            </button>
+            <button class="dropdown-item" type="button" style="font-family: 'comic sans ms'">
+                <img src="https://image.flaticon.com/icons/svg/299/299688.svg" style="height: 20px;width: 20px;">
+                <a href="index_eng.html"> English</a></button>
+        </div>
+    </div>
+
+    <div style="display:  flex; flex-direction: row" >
+        <!--&lt;!&ndash;<form action="" class="form-signin" th:action="@{/login}" method="post" style="display:  flex; flex-direction: row">&ndash;&gt;-->
+        <!--<form action="" class="form-signin" th:action="@{/indexHRauth}" method="get" style="display:  flex; flex-direction: row">-->
+        <!--&lt;!&ndash;<div th:if="${param.error}">&ndash;&gt;-->
+        <!--&lt;!&ndash;Invalid email and password.&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div th:if="${param.logout}">&ndash;&gt;-->
+        <!--&lt;!&ndash;You have been logged out.&ndash;&gt;-->
+        <!--&lt;!&ndash;</div >&ndash;&gt;-->
+        <!--&lt;!&ndash;<label for="email"></label>&ndash;&gt;-->
+        <!--<input type="email" name="email" id="email" class="form-control" placeholder="Email" required="true"-->
+        <!--autofocus="true"-->
+        <!--style="font-family: 'ARIAl'; font-size: 18px;">-->
+
+        <!--&lt;!&ndash;<label for="password"></label>&ndash;&gt;-->
+        <!--<input type="password" name="password" id="password" class="form-control" placeholder="Password"-->
+        <!--required="true"-->
+        <!--style="font-family: 'ARIAl'; font-size: 18px;">-->
+
+        <!--<button type="submit" class="btn btn-primary" style="margin-left: 16px; font-size: 10px; width: 200px; font-family: 'ARIAl';-->
+        <!--background-color: silver; height: 40px; border: 1px solid silver; font-size: 18px;">Sign in-->
+        <!--</button>-->
+        <!--</form>-->
+        <!--<form class="form-signin" th:action="@{/signup}" method="get">-->
+        <!--<button class="btn btn-md btn-success btn-block" type="Submit"-->
+        <!--style="margin-left: 16px; font-size: 10px; width: 200px;font-family: 'ARIAl';-->
+        <!--background-color: silver; height: 40px; border: 1px solid silver; font-size: 18px;">Реєстрація</button>-->
+        <!--</form>-->
+
+    </div>
+    <div class="dropdown">
+        <!--<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"-->
+        <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: silver;-->
+        <!--border: 1px solid silver;height: 50px; color: white; font-size: 17px;font-family: 'ARIAl';">-->
+        <!--ВХІД ДО СИСТЕМИ-->
+        <!--</button>-->
+        <!--<div class="dropdown-menu" aria-labelledby="dropdownMenu3" style="width: 300px;height: 300px;">-->
+        <!--<button class="dropdown-item" type="button" style="font-family: 'ARIAl'; font-size: 18px;">-->
+        <!--<div class="form-group">-->
+        <!--<label for="exampleDropdownFormEmail2">Email address</label>-->
+        <!--<input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email"-->
+        <!--style="font-family: 'ARIAl'; font-size: 18px;">-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+        <!--<label for="exampleDropdownFormPassword2">Password</label>-->
+        <!--<input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password"-->
+        <!--style="font-family: 'ARIAl'; font-size: 18px;">-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn btn-primary" style="margin-left: 16px; font-size: 10px; width: 200px; font-family: 'ARIAl';-->
+        <!--background-color: silver; height: 40px; border: 1px solid silver; font-size: 18px;">Sign in</button><br><br>-->
+        <!--<button type="submit" class="btn btn-primary" style="margin-left: 16px; font-size: 10px; width: 200px;font-family: 'ARIAl';-->
+        <!--background-color: silver; height: 40px; border: 1px solid silver; font-size: 18px;">Реєстрація</button>-->
+        <!--</button>-->
+        <!--</div>-->
+    </div>
+</div>
+<!--     <div id="header">
+    <div class="container">
+        <div class="row centered">
+            <div class="col-lg-8 col-lg-offset-2">
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!--_______________________________________________________________________________-->
+<div id="header1">
+    <div class="row" style="margin-left: 180px;">
+        <div class="col-lg-12 person_info">
+            <h2 style="color: #607647;font-family: ARIAL;margin-top: 30px; margin-left: 15px;">
+                Зробіть вибір навичок кандидатів</h2>
+            <!--  -->
+            <form method="post" class="form-horizontal form-horizontal-text-left">
+                <div class="row centered">
+                    <div style="background: #E6E6E6; font-family: ARIAL; font-size: 16px;  width: 1010px;">
+                        <input type="text" name="skills" id="skills" class="form-control" style="display: none;">
+                        <!-- Підписи під формою-->
+                        <div class="label-cloud-wrapper skills-cloud items-cloud">
+                            <a href="" class="label label-cloud">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Java</font>
+                                </font>
+                            </a>
+                            <a href="" class="label label-cloud">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">MySQL</font>
+                                </font>
+                            </a>
+                            <a href="" class="label label-cloud">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Git</font>
+                                </font>
+                            </a>
+                            <a href="" class="label label-cloud">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">CSS</font>
+                                </font>
+                            </a>
+                            <a href="" class="label label-cloud">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">HTML</font>
+                                </font>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!--  -->
+            <div class="form-group">
+                <form class="" th:action="@{/hrSearchResult}" method="get">
+                    <button class="btn btn-md centered btn-success btn-block" style="background-color: silver;
+                    border: 1px solid silver; width: 100px; margin: auto;"  type="Submit">Створити запит
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 500px;">
+    <div>
+        <hr>
+    </div>
+    <br>
+    <aside class="skills aside section">
+        <div class="section-inner">
+            <h2 class="heading">Співпадіння за вашим пошуком</h2>
+            <div class="content">
+                <div class="skillset">
+
+                    <div class="item">
+                        <h3 class="level-title"><a href="./data/cv/na.pdf" style="color:black">Андрій Рушмановський</a><span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Співпадіння навиків">75%</span></h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="75%">
+                            </div>
+                        </div><!--//level-bar-->
+                    </div><!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title"><a href="./data/cv/h.pdf" style="color:black">Андрій Несторов</a><span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Співпадіння навиків">60%</span></h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="60%">
+                            </div>
+                        </div><!--//level-bar-->
+                    </div><!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title"><a href="./data/cv/j.pdf" style="color:black">Олексій Барілов</a><span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="Співпадіння навиків">35%</span></h3>
+                        <div class="level-bar">
+                            <div class="level-bar-inner" data-level="35%">
+                            </div>
+                        </div><!--//level-bar-->
+                    </div><!--//item-->
+                </div>
+            </div><!--//content-->
+        </div><!--//section-inner-->
+    </aside><!--//section-->
+    <div>
+
+    </div>
+</div>
+<!--_______________________________________________________________________________-->
+<footer id="foot">
+    <div class="container">
+        <div class="icons">
+            <a href="https://uk-ua.facebook.com/" title="facebook"><img src="img/facebook.png" alt="facebook">Facebook</a>
+            <a href="https://www.instagram.com/?hl=uk" title="instagram"><img src="img/instagram.png" alt="instagram">Instagram</a>
+            <a href="https://twitter.com/?lang=ru" title="twitter"><img src="img/twitter.png" alt="twitter">Twitter</a>
+            <a href="https://www.skype.com/uk/" title="skype"><img src="img/skype.png" alt="skype">Skype</a>
+            <a href="https://www.whatsapp.com/?l=uk" title="whatsapp"><img src="img/whatsapp.png" alt="whatsapp">WhatsApp</a>
+        </div>
+    </div>
+</footer>
+<div class="end">
+    <div style="margin-top: 3px;">
+        <p>&nbsp;&nbsp;CVITA © 2018 - 2019. Всі права захищені&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+    </div>
+    <div style="margin-top: 3px;">
+        <p>Угода з користувачем і політика приватності&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+    </div>
+    <div style="margin-top: 3px;">
+        <p>Зворотній зв'язок</p>
+    </div>
+</div>
+<!--_______________________________________________________________________________-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- Логіка добавлення тагів -->
+<script src="/js/tag.js"></script>
+<!-- -->
+<script src="/js/bootstrap-tagsinput.min.js"></script>
+<script src="/js/bootstrap3-typeahead.min.js"></script>
+<script src="/js/inner-script.js"></script>
 </body>
+<script type="text/javascript" src="data/plugins/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="data/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="data/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
+<script type="text/javascript" src="data/js/main.js"></script>
 </html>

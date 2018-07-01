@@ -122,6 +122,11 @@ public class LoginController {
         return "indexHRauth.html";
     }
 
+    @RequestMapping(value = {"/indexHRauthSearch",}, method = RequestMethod.GET)
+    public String indexHRauths() {
+        return "indexHRauthSearch.html";
+    }
+
     @RequestMapping(value = {"/hrSearchResult",}, method = RequestMethod.GET)
     public String hrSearchResult() {
         return "hrSearchResult.html";
@@ -136,6 +141,11 @@ public class LoginController {
     @GetMapping("/indexUser.html")
     public String errodfghr403() {
         return "/user/indexUser.html";
+    }
+
+    @GetMapping("/grad")
+    public String grad() {
+        return "/grad.html";
     }
 
     @GetMapping("/indexHR.html")
