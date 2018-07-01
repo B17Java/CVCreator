@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
+
+* {
+    padding: 0;
+    margin: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #333;
+}
+a {
+    color: #f85c37;
+}
+
+a:hover,
+a:focus {
+    color: black;
+    text-decoration: none;
+    outline: 0;
+}
+
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.zagolovok{
+    width: 100%;
+    height: 55px;
+    background-color: silver;
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown{
+    left: 60%;
+}

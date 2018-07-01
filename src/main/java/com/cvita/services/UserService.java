@@ -15,6 +15,7 @@ public interface UserService {
 	void saveAboutUser(String idUser,AboutUser aboutUser);
 	void addHardSkillToAboutUserByUserId(String idUser, List<String> idHardSkills);
 
+
 	Map<Map<Integer, Integer>, Map<User, List<String>>> hrSearch(List<String> search);
 	HrSearchResult hrSearch2(List<String> search);
 

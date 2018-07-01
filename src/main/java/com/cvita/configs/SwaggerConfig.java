@@ -22,7 +22,7 @@ public class SwaggerConfig {
 				.groupName("CVITA-API")
 				.apiInfo(apiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.cvita.controllers"))
+				.apis(RequestHandlerSelectors.basePackage("com.cvita.controllers.rest"))
 				.paths(PathSelectors.any())
 				.build();
 	}

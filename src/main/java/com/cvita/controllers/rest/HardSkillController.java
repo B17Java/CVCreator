@@ -1,4 +1,4 @@
-package com.cvita.controllers;
+package com.cvita.controllers.rest;
 
 import com.cvita.models.HardSkill;
 import com.cvita.services.HardSkillService;
