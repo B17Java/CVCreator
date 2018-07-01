@@ -50,11 +50,11 @@ p {
 #header1 {
     background: url(/img/header.jpg) no-repeat center top;
 
-    padding-top: 50px;
+    padding-top: 10px;
     text-align: center;
     background-attachment: relative;
     background-position: center center;
-    min-height: 450px;
+    min-height: 320px;
     width: 100%;
     background-size: 100%;
 
@@ -64,11 +64,11 @@ p {
     background-size: cover;
 }
 #header2 {
-    padding-top: 50px;
+    padding-top: 10px;
     text-align: center;
     background-attachment: relative;
     background-position: center center;
-    min-height: 450px;
+    min-height: 300px;
     width: 100%;
     background-size: 100%;
 
