@@ -1,0 +1,38 @@
+ div.faq h4 {
+            padding-top: 15px;
+        }
+
+        .input.salary {
+            width: 70px;
+        }
+
+        ul.list-unstyled li label {
+            display: inline-block;
+        }
+
+        p.preview {
+            white-space: pre-wrap;
+            font-size: 0.9em;
+        }
+
+        div.tips li, div.tips p {
+            font-size: 0.9em;
+        }
+
+        .form-group {
+            margin-bottom: 1.75em;
+        }
+
+        .form-group .help-block {
+            margin-bottom: 0;
+        }
+
+        .charsLeft-warn {
+            margin-top: 0.75em;
+            margin-bottom: 0;
+            font-size: 0.9em;
+        }
+
+        .bootstrap-tagsinput {
+            width: 100% !important;
+        }

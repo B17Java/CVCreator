@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" \
-      xmlns:sec="http://www.w3.org/1999/xhtml">
+>
 <head>
     <title>CVTITA</title>
     <meta charset="UTF-8">
@@ -51,9 +51,10 @@
     </div>
 
 
+    <div style="display:  flex; flex-direction: row">
+        <div>Кузьменко Олександр</div>
 
-
-   
+    </div>
     <!--         <form class="form-inline">
         <div class="form-group mx-sm-3 mb-2" style="margin-top: 0px;">
             <label for="inputPassword2" class="sr-only" style="margin-left: 5px;">Логин</label>
@@ -75,6 +76,8 @@
                     color:white;font-family: 'ARIAL';font-size: 24px;text-align: left;">
                     Вибір HR менеджерами фахівців</br>з гарантованою кваліфікацією
                 </div>
+
+
                 <form class="form-signin" th:action="@{/indexhr}" method="get">
                     <button class="btn btn-md btn-success btn-block" type="Submit"
                             style="height: 50px;
@@ -82,6 +85,9 @@
                         background-color: silver;border:4px solid silver;">Створити запит
                     </button>
                 </form>
+
+                <div>
+                </div>
             </div>
         </div>
     </div>
@@ -100,14 +106,12 @@
                     підтвердження кваліфікації</br>
                     додаткове навчання
                 </div>
-
-                    <form class="form-signin" th:action="@{/indexUser}" method="get">
-                        <button class="btn btn-md btn-success btn-block" type="Submit"
-                                style="height: 50px;
-                        width: auto;font-size: 23px;margin-right: 550px;
-                        background-color: silver;border:4px solid silver;">Створити резюме
-                        </button>
-                    </form>
+                <form class="form-signin" th:action="@{/signup}" method="get">
+                    <button class="btn btn-md btn-success btn-block" type="Submit"
+                            style="height: 50px;
+                        width: auto;font-size: 23px;margin-right: 590px;
+                        background-color: silver;border:4px solid silver;">Реєстрація
+                    </button>
                 </form>
             </div>
         </div>

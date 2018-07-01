@@ -61,8 +61,8 @@ p {
 .form-control:hover{
     background-color: #D8D8D8; /* Цвет фона под ссылкой */
 
-   }
- textarea:hover{
+}
+textarea:hover{
     background-color: #D8D8D8; /* Цвет фона под ссылкой */
 }
 .form-group{
@@ -84,13 +84,13 @@ p {
     height: 650px;
 }
 #top{
-    top: -10px;
+    top: 0px;
     position: fixed;
     right: 0px;
 }
 
 #header1 {
-/*    padding-top: 10px;*/
+    /*    padding-top: 10px;*/
     text-align: center;
     background-attachment: relative;
     background-position: center center;
@@ -104,7 +104,7 @@ p {
     background-size: cover;
 }
 
- #foot {
+#foot {
     /*margin-top: 10px;*/
     color: black;
     background: white;

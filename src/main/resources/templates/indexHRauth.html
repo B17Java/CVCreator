@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CVTITA</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/StyleHR.css">
-    <link rel="stylesheet" href="./css/inner-styles.css">
-    <link rel="stylesheet" href="./css/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="./css/text.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/StyleHR.css">
+    <link rel="stylesheet" href="/css/inner-styles.css">
+    <link rel="stylesheet" href="/css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="/css/text.css">
     <!-- Rita -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -41,6 +41,11 @@
                     <img src="https://image.flaticon.com/icons/svg/299/299688.svg" style="height: 20px;width: 20px;">
                     <a href="index_eng.html"> English</a></button>
             </div>
+        </div>
+
+        <div style="display:  flex; flex-direction: row">
+            <div>Кузьменко Олександр</div>
+
         </div>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
@@ -161,12 +166,10 @@
                 <textarea rows="3" cols="190" name="text" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-family: ARIAL; 
                 font-size: 16px;margin-left: 20px; border-radius: 4px;border: 1px solid lightgrey; width: 965px;"></textarea>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg" style="background-color: silver;
-                    border: 1px solid silver">
-                        <font style="vertical-align: inherit;">
-                            <font class="but">ДОПОМОГА СПЕЦІАЛІСТА</font>
-                        </font>
-                    </button>
+                    <form class="form-signin" th:action="@{/hrSearchResult}" method="get">
+                        <button class="btn btn-md btn-success btn-block" type="Submit">Створити запит
+                        </button>
+                    </form>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <button type="submit" class="btn btn-primary btn-lg" style="background-color: silver;
                     border: 1px solid silver">
@@ -232,13 +235,13 @@
     </div>
     <!--_______________________________________________________________________________-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!-- Логіка добавлення тагів -->
-    <script src="./js/tag.js"></script>
+    <script src="/js/tag.js"></script>
     <!-- -->
-    <script src="./js/bootstrap-tagsinput.min.js"></script>
-    <script src="./js/bootstrap3-typeahead.min.js"></script>
-    <script src="./js/inner-script.js"></script>
+    <script src="/js/bootstrap-tagsinput.min.js"></script>
+    <script src="/js/bootstrap3-typeahead.min.js"></script>
+    <script src="/js/inner-script.js"></script>
 </body>
 
 </html>

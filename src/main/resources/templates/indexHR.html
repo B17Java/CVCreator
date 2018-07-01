@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CVTITA</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/StyleUser.css">
-    <link rel="stylesheet" href="./css/inner-styles.css">
-    <link rel="stylesheet" href="./css/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="./css/text.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/StyleHR.css">
+    <link rel="stylesheet" href="/css/inner-styles.css">
+    <link rel="stylesheet" href="/css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="/css/text.css">
     <!-- Rita -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -41,6 +41,37 @@
                     <img src="https://image.flaticon.com/icons/svg/299/299688.svg" style="height: 20px;width: 20px;">
                     <a href="index_eng.html"> English</a></button>
             </div>
+        </div>
+
+        <div style="display:  flex; flex-direction: row" >
+            <!--<form action="" class="form-signin" th:action="@{/login}" method="post" style="display:  flex; flex-direction: row">-->
+            <form action="" class="form-signin" th:action="@{/indexHRauth}" method="get" style="display:  flex; flex-direction: row">
+                <!--<div th:if="${param.error}">-->
+                <!--Invalid email and password.-->
+                <!--</div>-->
+                <!--<div th:if="${param.logout}">-->
+                <!--You have been logged out.-->
+                <!--</div >-->
+                <!--<label for="email"></label>-->
+                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required="true"
+                       autofocus="true"
+                       style="font-family: 'ARIAl'; font-size: 18px;">
+
+                <!--<label for="password"></label>-->
+                <input type="password" name="password" id="password" class="form-control" placeholder="Password"
+                       required="true"
+                       style="font-family: 'ARIAl'; font-size: 18px;">
+
+                <button type="submit" class="btn btn-primary" style="margin-left: 16px; font-size: 10px; width: 200px; font-family: 'ARIAl';
+                    background-color: silver; height: 40px; border: 1px solid silver; font-size: 18px;">Sign in
+                </button>
+            </form>
+            <form class="form-signin" th:action="@{/signup}" method="get">
+                <button class="btn btn-md btn-success btn-block" type="Submit"
+                        style="margin-left: 16px; font-size: 10px; width: 200px;font-family: 'ARIAl';
+                    background-color: silver; height: 40px; border: 1px solid silver; font-size: 18px;">Реєстрація</button>
+            </form>
+
         </div>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
@@ -82,44 +113,8 @@
     <!--_______________________________________________________________________________-->
     <div id="header1">
         <div class="row">
-            <div class="col-lg-9 person_info">
-                <legend class="top-help" style="font-size: 23px; margin-top: 30px;">ПЕРСОНАЛЬНА ІНФОРМАЦІЯ</legend>
-                <div class="col-lg-3 field">
-                    <h2 style="margin-left: 30px; margin-bottom: 20px;margin-top: 10px;">Ім`я</h2>
-                    <h2 style="margin-left: 30px; margin-bottom: 20px;">Дата народження</h2>
-                    <h2 style="margin-left: 30px;">E-mail</h2>
-                </div>
-                <div class="col-lg-3 ">
-                    <input type="text" class="form-control" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-size: 16px; margin-bottom: 10px;">
-                    <input type="text" class="form-control" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-size: 16px; margin-bottom: 10px;">
-                    <input type="text" class="form-control" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-size: 16px; margin-bottom: 10px;">
-                </div>
-                <div class="col-lg-3 field">
-                    <h2 style="margin-left: 50px; margin-bottom: 20px;margin-top: 10px;">Прізвище</h2>
-                    <h2 style="margin-left: 50px; margin-bottom: 20px;">Телефон</h2>
-                    <h2 style="margin-left: 50px;">Website</h2>
-                </div>
-                <div class="col-lg-3">
-                    <input type="text" class="form-control" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-size: 16px;margin-bottom: 10px;">
-                    <input type="text" class="form-control" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-size: 16px;margin-bottom: 10px;">
-                    <input type="text" class="form-control" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-size: 16px;margin-bottom: 10px;">
-                </div>
-                <h2 style="color: #607647;font-family: ARIAL;">Адреса</h2>
-                <input type="text" class="form-control" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-family: ARIAL; font-size: 16px;
-                margin-left: 25px;width: 965px;">
-                <h2 class="top-help" style="margin-top: 10px;">МЕТА</h2>
-                <textarea rows="2" cols="190" name="text" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-family: ARIAL; font-size: 16px;
-                margin-left: 20px; border-radius: 4px;border: 1px solid lightgrey; width: 965px;"></textarea>
-                <h2 class="top-help" style="margin-top: 10px;">ДОСВІД</h2>
-                <textarea rows="3" cols="190" name="text" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-family: ARIAL; font-size: 16px;
-                margin-left: 20px; border-radius: 4px;border: 1px solid lightgrey; width: 965px;"></textarea>
-                <h2 class="top-help" style="margin-top: 10px;">ОСВІТА</h2>
-                <textarea rows="3" cols="190" name="text" value="" onfocus="this.style.background = '#D8D8D8';" nblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-family: ARIAL; font-size: 16px;
-                margin-left: 20px; border-radius: 4px;border: 1px solid lightgrey; width: 965px;"></textarea>
-                <h2 style="color: #607647;font-family: ARIAL;margin-top: 10px;">SOFT SKILLS</h2>
-                <input type="text" class="form-control" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-family: ARIAL; font-size: 16px;
-                margin-left: 25px;width: 965px;">
-                <h2 style="color: #607647;font-family: ARIAL;margin-top: 10px;">HARD SKILLS</h2>
+            <div class="col-lg-12 person_info">
+                  <h2 style="color: #607647;font-family: ARIAL;margin-top: 10px;">HARD SKILLS</h2>
                 <!--  -->
                 <form method="post" class="form-horizontal form-horizontal-text-left">
                     <div class="row centered">
@@ -157,50 +152,12 @@
                     </div>
                 </form>
                 <!--  -->
-                <h2 class="top-help" style="margin-top: 10px;">ДОДАТКОВА ІНФОРМАЦІЯ</h2>
-                <textarea rows="3" cols="190" name="text" value="" onfocus="this.style.background = '#D8D8D8';" onblur="this.style.background = '#E6E6E6';" style="background: #E6E6E6; font-family: ARIAL; 
-                font-size: 16px;margin-left: 20px; border-radius: 4px;border: 1px solid lightgrey; width: 965px;"></textarea>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg" style="background-color: silver;
-                    border: 1px solid silver">
-                        <font style="vertical-align: inherit;">
-                            <font class="but">ДОПОМОГА СПЕЦІАЛІСТА</font>
-                        </font>
-                    </button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="submit" class="btn btn-primary btn-lg" style="background-color: silver;
-                    border: 1px solid silver">
-                        <font style="vertical-align: inherit;">
-                            <font class="but" >ДОДАТИ У БАЗУ</font>
-                        </font>
-                    </button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="submit" class="btn btn-primary btn-lg" style="background-color: silver;
-                    border: 1px solid silver">
-                        <font style="vertical-align: inherit;">
-                            <font class="but">ПІДТВЕРДЖЕННЯ КВАЛІФІКАЦІЇ</font>
-                        </font>
-                    </button>
-                </div>
-            </div>
-            <!--  -->
-            <div class="col-lg-3 person_choose" id="top">
-                <a href="#" id="top"></a>
-                <div style="display: flex;flex-direction: row;margin-left: 65px;margin-top: 13px;">
-                    <img src="img/cvita.png" style="height: 60px; width: 180px;">
-                </div>
-                <br>
-                <br>
-                <div style="margin-top: 10px;display: flex;flex-direction: column;">
-                    <button type="button" class="btn btn-outline-success" style="width: 250px;margin:auto;margin-bottom: 25px;height: 55px;">
-                        <img src="https://image.flaticon.com/icons/png/512/448/448720.png" style="height: 30px;width: 30px;">
-                        <span style="font-size: 18px;">&nbsp;Просмотр</span></button>
-                    <button type="button" class="btn btn-outline-danger" style="width: 250px;margin:auto;margin-bottom:25px;height: 55px;">
-                        <img src="https://image.flaticon.com/icons/svg/148/148730.svg" style="height: 30px;width: 30px;">
-                        <span style="font-size: 18px;">&nbsp;Сохранить</span></button>
-                    <button type="button" class="btn btn-outline-info" style="width: 250px;margin:auto;">
-                        <img src="https://image.flaticon.com/icons/svg/955/955015.svg" style="height: 30px;width: 30px;height: 46px;">
-                        <span style="font-size: 18px;">&nbsp;Скачать</span></button>
+                    <form class="" th:action="@{/hrSearchResult}" method="get">
+                        <button class="btn btn-md centered btn-success btn-block" style="background-color: silver;
+                    border: 1px solid silver; width: 100px;"  type="Submit">Створити запит
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -232,13 +189,13 @@
     </div>
     <!--_______________________________________________________________________________-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!-- Логіка добавлення тагів -->
-    <script src="./js/tag.js"></script>
+    <script src="/js/tag.js"></script>
     <!-- -->
-    <script src="./js/bootstrap-tagsinput.min.js"></script>
-    <script src="./js/bootstrap3-typeahead.min.js"></script>
-    <script src="./js/inner-script.js"></script>
+    <script src="/js/bootstrap-tagsinput.min.js"></script>
+    <script src="/js/bootstrap3-typeahead.min.js"></script>
+    <script src="/js/inner-script.js"></script>
 </body>
 
 </html>

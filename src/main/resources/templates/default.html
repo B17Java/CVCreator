@@ -22,7 +22,8 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item" th:if="${currentUser == null}"><a class="nav-link" th:href="@{/login}">Log in</a></li>
+                    <li class="nav-item" th:if="${currentUser == null}">
+                        <a class="nav-link" th:href="@{/login}">Log in</a></li>
                     <li class="nav-item" th:if="${currentUser}">
                         <a class="nav-link" th:text="${fullName}"></a>
                         <form th:action="@{/logout}" method="post">

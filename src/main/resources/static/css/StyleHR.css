@@ -15,16 +15,6 @@ h6 {
     font-weight: 300;
     color: #333;
 }
-a {
-    color: #f85c37;
-}
-
-a:hover,
-a:focus {
-    color: black;
-    text-decoration: none;
-    outline: 0;
-}
 
 p {
     line-height: 28px;
@@ -45,4 +35,109 @@ p {
 
 .dropdown{
     left: 60%;
+}
+
+.form-horizontal{
+    background: #E6E6E6;
+    font-family: ARIAL;
+    font-size: 16px;
+    margin-left: 25px;
+    width: 965px;
+}
+.top-help {
+    color: #607647;
+    font-family: ARIAL;
+    font-weight: 300;
+    margin: 0 0 10px;
+    width: 100%;
+}
+
+.person_info{
+    background-color: white;
+    height: auto;
+}
+
+
+.form-control:hover{
+    background-color: #D8D8D8; /* Цвет фона под ссылкой */
+
+}
+textarea:hover{
+    background-color: #D8D8D8; /* Цвет фона под ссылкой */
+}
+.form-group{
+    margin-top: 25px;
+}
+.but{
+    vertical-align: inherit;
+    font-size: 18px;
+    font-family: ARIAL;
+}
+.field{
+    text-align: left;
+    color: #607647;
+    font-family: ARIAL;
+}
+
+.person_choose{
+    background-color: silver;
+    height: 650px;
+}
+#top{
+    top: 0px;
+    position: fixed;
+    right: 0px;
+}
+
+#header1 {
+    /*    padding-top: 10px;*/
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: auto;
+    width: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#foot {
+    /*margin-top: 10px;*/
+    color: black;
+    background: white;
+    border:1px solid grey;
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+#foot h4 {
+    color: black;
+    font-family: serif;
+    font-size: 15px;
+}
+
+#foot a {
+    margin-right: 15px;
+}
+
+.icons {
+    text-align: center;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+    width: 10px;
+    height: 10px;
+
+}
+.end{
+    width: 100%;
+    height: auto;
+    background-color: silver;
+    color:white;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
 }
